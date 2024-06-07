@@ -12,7 +12,7 @@
                 <ul>
                     <li><a>본인 소개</a>
                         <ul>
-                            <li><a href="objective.html">주제 및 목표</a></li>
+                            <li><a href="objective.html">목표</a></li>
                             <li><a href="personal_history.html">성장 과정</a></li>
                             <li><a href="issue.html">최근 이슈 및 견해</a></li>
                             <li><a href="problem.html">최근 어려웠던 부분</a></li>
@@ -23,12 +23,10 @@
                             <li><a href="rsa_en.html">RSA</a></li>
                             <li><a href="homomorphic_en.html">동형암호</a></li>
                             <li><a href="intro_nexon.html">넥슨</a></li>
-                            <li><a href="intro_neo.html">네오위즈</a></li>
                         </ul>
                     </li>
                     <li><a>미래 계획</a>
                         <ul>
-                            <li><a href="study_p.html">공부 계획</a></li>
                             <li><a href="employ.html">취업</a></li>
                         </ul>
                     </li>
@@ -42,9 +40,23 @@
             </div>
         </header>
         <div class="page">
-            asdf
+            <h3>동형암호 예제</h3>
+            <hr>
+            1. a와 b 입력<br>
+            a : <input id="a_value" type="text"> / b : <input id="b_value" type="text"><button onclick="res()">입력 완료</button><br>
+            a + b = <input id="c_value" type="text" disabled><br>
+            2. 임의의 A와 B 생성<br>
+            <button onclick="make_AB()">생성</button><br>
+            A : <input id="A_value" type="text" disabled> / B : <input id="B_value" type="text" disabled><br>
+            3. 임의의 a와 b 암호화<br>
+            <button onclick="encrypt()">생성</button><br>
+            a` : <input id="a_en_value" type="text" disabled> / b` : <input id="b_en_value" type="text" disabled><br>
+            a` + b` : <input id="c_en_value" type="text" disabled><br>
+            4. a` + b` 복호화<br>
+            <button onclick="decode()">생성</button><br>
+            <input id="res_en_value" type="text" disabled>
         </div>
-        <script>
+        <script src="homomorphic_ex_js.js">
         </script>
     </body>
 </html>

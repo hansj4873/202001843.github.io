@@ -12,7 +12,7 @@
                 <ul>
                     <li><a>본인 소개</a>
                         <ul>
-                            <li><a href="objective.html">주제 및 목표</a></li>
+                            <li><a href="objective.html">목표</a></li>
                             <li><a href="personal_history.html">성장 과정</a></li>
                             <li><a href="issue.html">최근 이슈 및 견해</a></li>
                             <li><a href="problem.html">최근 어려웠던 부분</a></li>
@@ -23,12 +23,10 @@
                             <li><a href="rsa_en.html">RSA</a></li>
                             <li><a href="homomorphic_en.html">동형암호</a></li>
                             <li><a href="intro_nexon.html">넥슨</a></li>
-                            <li><a href="intro_neo.html">네오위즈</a></li>
                         </ul>
                     </li>
                     <li><a>미래 계획</a>
                         <ul>
-                            <li><a href="study_p.html">공부 계획</a></li>
                             <li><a href="employ.html">취업</a></li>
                         </ul>
                     </li>
@@ -42,9 +40,27 @@
             </div>
         </header>
         <div class="page">
-            asdf
+            <h3>동형 암호(homomorphic encryption)</h3>
+            <hr>
+            동형암호는 간단하게 데이터에 덧셈, 뺄셈, 곱셈같은 간단한 연산을 하여서 암호화 시키는 방법을 말한다.
+            동형암호의 최고의 장점은 암호화 된 상태에서 연산을 수행하는 것이 가능하다는 것이다.<br>
+            <canvas id="h_canvas" width="617px" height="366px" style="display: inline-block;"></canvas><br>
+            동형암호는 간단하게 데이터에 덧셈, 뺄셈, 곱셈같은 간단한 연산을 하여서 암호화 시키는 방법을 말한다.
+            동형암호의 최고의 장점은 암호화 된 상태에서 연산을 수행하는 것이 가능하다는 것이다.<br>
+            위과 같은 방식으로 암호화 하여서 쓰는 방식이 동형암호의 가장 간단한 방식이다.
+            보이는 것 같이 메시지를 암호화하고 계산해도 암호화하지 않고 계산하는 것과 같은 결과가 나온다.
+            간단하게는 게임 내부의 변수를 암호화시켜서 데이터마이닝이나 치트를 막는 기술 부터 금융, 헬스케어 등 계산할 일이 많은 업계까지 다양하게 적용해서 사용가능하다.
+            다만 암호화 과정에서 데이터의 크기가 커지고 추가 연산이 필요하므로 연산 처리하는데에 시간이 늘어 나기에 연산을 효과적으로 처리하여서 연산 처리 속도를 높여야지 사용 가능할 것으로 판단된다.
+
         </div>
         <script>
+            var c = document.getElementById("h_canvas");
+            var context = c.getContext("2d");
+            var img = new Image();
+            img.onload = function(){
+                context.drawImage(img, 0, 0, c.width, c.height);
+            }
+            img.src = "abouthe1.png";
         </script>
     </body>
 </html>

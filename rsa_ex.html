@@ -23,12 +23,10 @@
                             <li><a href="rsa_en.html">RSA</a></li>
                             <li><a href="homomorphic_en.html">동형암호</a></li>
                             <li><a href="intro_nexon.html">넥슨</a></li>
-                            <li><a href="intro_neo.html">네오위즈</a></li>
                         </ul>
                     </li>
                     <li><a>미래 계획</a>
                         <ul>
-                            <li><a href="study_p.html">공부 계획</a></li>
                             <li><a href="employ.html">취업</a></li>
                         </ul>
                     </li>
@@ -42,9 +40,31 @@
             </div>
         </header>
         <div class="page">
-            asdf
+            <h3>RSA 예제</h3>
+            <hr>
+             <br>
+            1. 두 소수 p, q를 준비한다.(에라토스테네스의 체로 2개의 랜덤 소수 생성)<br>
+            <button onclick="make_pq()">소수 생성</button><br>
+            p : <input id="p_value" type="text" disabled> / q : <input id="q_value" type="text" disabled><br>
+            2. p - 1, q - 1과 각각 서로소인 정수 e를 준비한다.<br>
+            <button onclick="make_e()">e 생성</button><br>
+            e : <input id="e_value" type="text" disabled><br>
+            3. ed를 (p - 1)(q - 1)으로 나눈 나머지가 1이 되도록 하는 d를 찾는다.(확장된 유클리드 호제법)<br>
+            <button onclick="make_d()">d 생성</button><br>
+            d : <input id="d_value" type="text" disabled><br>
+            4. N = pq를 계산한 후, N과 e를 공개키로 사용한다. d는 개인키로 사용한다.<br>
+            <button onclick="make_N()">N 생성</button><br>
+            N : <input id="N_value" type="text" disabled><br>
+            final. 암호화할 숫자 입력 후 버튼 클릭(입력 되는 수는 N보다 작아야 한다.)<br>
+            <input id="target_en" type="text">
+            <button onclick="encrypt()">암호화</button><br>
+            result : <input id="res_en" type="text" disabled><br>
+            복호화 버튼 클릭<br>
+            <input id="target_de" type="text" disabled>
+            <button onclick="decode()">복호화</button><br>
+            result : <input id="res_de" type="text" disabled><br>
         </div>
-        <script>
+        <script src="rsa_ex_js.js">
         </script>
     </body>
 </html>
