@@ -48,12 +48,15 @@
                 
                 <details>
                     <summary>참조</summary>
-                    <a href="https://blog.naver.com/PostView.naver?blogId=bgpoilkj&logNo=221150512824" target="_blank">드롭 다운</a><br>
-                    <a href="https://tired-o.github.io/posts/github-blog-1/" target="_blank">git 연결</a>
+                    <a href="javascript:load('https://blog.naver.com/PostView.naver?blogId=bgpoilkj&logNo=221150512824')">드롭 다운</a><br>
+                    <a href="javascript:load('https://tired-o.github.io/posts/github-blog-1/')">git 연결</a>
                 </details>
             </p>
         </div>
         <script>
+            function load(URL){
+                newWin = window.open(URL, "new", "left = 1000, top=1000, width= 1000, height=1000");
+            }
         </script>
     </body>
 </html>
